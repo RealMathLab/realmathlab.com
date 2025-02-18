@@ -13,26 +13,36 @@
         footer { background: #333; color: white; text-align: center; padding: 10px; position: relative; bottom: 0; width: 100%; }
         .lang-toggle { text-align: center; margin: 20px; }
     </style>
-    <script>
+   <script>
         function toggleLanguage(lang) {
-            document.querySelectorAll(".en, .ko").forEach(el => el.style.display = "none");
-            document.querySelectorAll("." + lang).forEach(el => el.style.display = "block");
+            if (lang === 'en') {
+                document.querySelectorAll(".en").forEach(el => el.style.display = "block");
+                document.querySelectorAll(".ko").forEach(el => el.style.display = "none");
+            } else {
+                document.querySelectorAll(".en").forEach(el => el.style.display = "none");
+                document.querySelectorAll(".ko").forEach(el => el.style.display = "block");
+            }
         }
     </script>
 </head>
 <body onload="toggleLanguage('en')">
-    <header>
-        <h1>Welcome to Real Math Lab / 리얼 수학 연구소에 오신 것을 환영합니다</h1>
+   <header>
+        <h1 class="en">Welcome to Real Math Lab</h1>
+        <h1 class="ko">리얼 매쓰 랩에 오신 것을 환영합니다</h1>
     </header>
     <div class="lang-toggle">
         <button onclick="toggleLanguage('en')">English</button>
         <button onclick="toggleLanguage('ko')">한국어</button>
     </div>
     <nav>
-        <a href="#team">Team / 팀</a>
-        <a href="#mission">Mission & Vision / 미션 & 비전</a>
-        <a href="#consulting">Schedule a Consulting / 상담 예약</a>
-        <a href="#faq">FAQ / 자주 묻는 질문</a>
+        <a href="#team" class="en">Team</a>
+        <a href="#team" class="ko">팀</a>
+        <a href="#mission" class="en">Mission & Vision</a>
+        <a href="#mission" class="ko">미션 & 비전</a>
+        <a href="#consulting" class="en">Schedule a Consulting</a>
+        <a href="#consulting" class="ko">상담 예약</a>
+        <a href="#faq" class="en">FAQ</a>
+        <a href="#faq" class="ko">자주 묻는 질문</a>
     </nav>
     <section id="team">
         <h2 class="en">Team</h2>
@@ -46,13 +56,13 @@
         <h2 class="en">Mission & Vision</h2>
         <h2 class="ko">미션 & 비전</h2>
         <p class="en">Our mission is to revolutionize math education through innovative learning strategies.</p>
-        <p class="ko">우리의 미션은 혁신적인 학습 전략을 통해 수학 교육을 혁신하는 것입니다.</p>
+        <p class="ko">우리의 미션은 학생들의 개별적인 수학적 추론 과정을 분석하여 더 나은 수학 교육 방향을 제시하는 것입니다.</p>
     </section>
     <section id="consulting">
         <h2 class="en">Schedule a Consulting</h2>
         <h2 class="ko">상담 예약</h2>
         <p class="en">Book a session with us to explore solutions for math education challenges.</p>
-        <p class="ko">수학 교육 문제 해결을 위한 상담을 예약하세요.</p>
+        <p class="ko">자녀의 수학 교육 컨설팅 세션을 예약하세요.</p>
     </section>
     <section id="faq">
         <h2 class="en">FAQ</h2>
@@ -61,7 +71,10 @@
         <p class="ko">우리 서비스 및 방법에 대한 자주 묻는 질문에 대한 답변을 찾아보세요.</p>
     </section>
     <footer>
-        <p>&copy; 2025 Real Math Lab. All rights reserved. / 2025 리얼 수학 연구소. 모든 권리 보유.</p>
+        <p class="en">&copy; 2025 Real Math Lab. All rights reserved.</p>
+        <p class="ko">&copy; 2025 리얼 매쓰 랩. 모든 권리 보유.</p>
+        <p class="en">Contact Us: <a href="mailto:info@realmathlab.com">realmathlab@gmail.com</a></p>
+        <p class="ko">문의하기: <a href="이메일:info@realmathlab.com">realmathlab@gmail.com</a></p>
     </footer>
 </body>
 </html>
