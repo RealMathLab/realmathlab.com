@@ -11,39 +11,57 @@
         nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 18px; }
         section { padding: 50px; max-width: 800px; margin: auto; }
         footer { background: #333; color: white; text-align: center; padding: 10px; position: relative; bottom: 0; width: 100%; }
+        .lang-toggle { text-align: center; margin: 20px; }
     </style>
+    <script>
+        function toggleLanguage(lang) {
+            document.querySelectorAll(".en, .ko").forEach(el => el.style.display = "none");
+            document.querySelectorAll("." + lang).forEach(el => el.style.display = "block");
+        }
+    </script>
 </head>
-<body>
+<body onload="toggleLanguage('en')">
     <header>
-        <h1>Welcome to Real Math Lab</h1>
+        <h1>Welcome to Real Math Lab / 리얼 수학 연구소에 오신 것을 환영합니다</h1>
     </header>
+    <div class="lang-toggle">
+        <button onclick="toggleLanguage('en')">English</button>
+        <button onclick="toggleLanguage('ko')">한국어</button>
+    </div>
     <nav>
-        <a href="#team">Team</a>
-        <a href="#mission">Mission & Vision</a>
-        <a href="#consulting">Schedule a Consulting</a>
-        <a href="#faq">FAQ</a>
+        <a href="#team">Team / 팀</a>
+        <a href="#mission">Mission & Vision / 미션 & 비전</a>
+        <a href="#consulting">Schedule a Consulting / 상담 예약</a>
+        <a href="#faq">FAQ / 자주 묻는 질문</a>
     </nav>
     <section id="team">
-        <h2>Team</h2>
-        <p>Meet our dedicated team of experts in mathematics education and research.</p>
-        <p>Consulting Leader: <a href="https://scholar.google.com/citations?user=Us5DBtMAAAAJ&hl=en" target="_blank">Boram Lee</a> (<a href="https://scholar.google.com/citations?user=Us5DBtMAAAAJ&hl=en" target="_blank">Google Scholar</a> & <a href="https://www.linkedin.com/in/boramleetg?trk=profile-badge" target="_blank">LinkedIn</a>)</p>
-        <!-- LinkedIn Script -->
-        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+        <h2 class="en">Team</h2>
+        <h2 class="ko">팀</h2>
+        <p class="en">Meet our dedicated team of experts in mathematics education and research.</p>
+        <p class="ko">수학 교육과 연구에 헌신하는 전문가 팀을 만나보세요.</p>
+        <p class="en">Consulting Leader: Boram Lee (<a href="https://scholar.google.com/citations?user=Us5DBtMAAAAJ&hl=en" target="_blank">Google Scholar</a> & <a href="https://www.linkedin.com/in/boramleetg?trk=profile-badge" target="_blank">LinkedIn</a>)</p>
+        <p class="ko">컨설팅 리더: 이보람 (<a href="https://scholar.google.com/citations?user=Us5DBtMAAAAJ&hl=en" target="_blank">구글 스칼라</a> & <a href="https://www.linkedin.com/in/boramleetg?trk=profile-badge" target="_blank">링크드인</a>)</p>
     </section>
     <section id="mission">
-        <h2>Mission & Vision</h2>
-        <p>Our mission is to revolutionize math education through innovative learning strategies.</p>
+        <h2 class="en">Mission & Vision</h2>
+        <h2 class="ko">미션 & 비전</h2>
+        <p class="en">Our mission is to revolutionize math education through innovative learning strategies.</p>
+        <p class="ko">우리의 미션은 혁신적인 학습 전략을 통해 수학 교육을 혁신하는 것입니다.</p>
     </section>
     <section id="consulting">
-        <h2>Schedule a Consulting</h2>
-        <p>Book a session with us to explore solutions for math education challenges.</p>
+        <h2 class="en">Schedule a Consulting</h2>
+        <h2 class="ko">상담 예약</h2>
+        <p class="en">Book a session with us to explore solutions for math education challenges.</p>
+        <p class="ko">수학 교육 문제 해결을 위한 상담을 예약하세요.</p>
     </section>
     <section id="faq">
-        <h2>FAQ</h2>
-        <p>Find answers to common questions about our services and methods.</p>
+        <h2 class="en">FAQ</h2>
+        <h2 class="ko">자주 묻는 질문</h2>
+        <p class="en">Find answers to common questions about our services and methods.</p>
+        <p class="ko">우리 서비스 및 방법에 대한 자주 묻는 질문에 대한 답변을 찾아보세요.</p>
     </section>
     <footer>
-        <p>&copy; 2025 Real Math Lab. All rights reserved.</p>
+        <p>&copy; 2025 Real Math Lab. All rights reserved. / 2025 리얼 수학 연구소. 모든 권리 보유.</p>
     </footer>
 </body>
 </html>
